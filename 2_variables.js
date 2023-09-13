@@ -13,4 +13,3 @@ console.log(points);
 
 const num = 30;  // can't be changed.
 console.log(num);
-
