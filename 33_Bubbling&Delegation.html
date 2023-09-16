@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+
+    <h1>Coders Todo List</h1>
+
+    <ul>
+        <li>Eat</li>
+        <li>Sleep</li>
+        <li>Code</li>
+        <li>Repeat</li>
+    </ul>
+
+    <button class="clickme">Click Me</button>
+
+
+
+    <script>
+        // Event Basics (click event)
+
+        // Bubbling and Delegation
+
+
+        // Bubbling 
+        let ul = document.querySelector('ul');
+        ul.addEventListener('click', function () {
+            console.log("Inside UL");
+
+        });
+        let elements = document.querySelectorAll('li');
+        elements.forEach((element) => {
+            element.addEventListener('click', () => {
+                console.log("Inside LI");
+            })
+        })
+
+        // Delegation
+        ul.addEventListener('click', (e) => {
+            if(e.target.nodeName == "LI"){
+                console.log(e);
+                e.target.remove();
+            }
+        })
+    </script>
+</body>
+
+</html>

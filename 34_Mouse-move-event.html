@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>More events</h1>
+    <p class="copy">You cant copy this</p>
+    <div class="box" style="height :200px ; width: 250px; border :2px solid red"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ab distinctio!</p>
+
+
+    <script>
+
+        // Copy Event
+        let copyRightElement = document.querySelector('.copy');
+        copyRightElement.addEventListener('copy', ()=>{
+            console.log("OOOI! This is copy right content");
+        });
+
+        let box = document.querySelector('.box');
+        box.addEventListener('mousemove', (e)=>{
+            console.log(e.offsetX, e.offsetY);
+        })
+    </script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@
     <div class="content">
         <p>Hello coders</p>
     </div>
-    <h1> Hello everyone</h1>
+    <h1 class="main"> Hello everyone</h1>
     <a href="https://www.youtube.com/watch?v=Pw_rtGFLEqk">BlackHat Jr.</a>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sapiente.</p>
     <h2 class="coderdost">Lorem ipsum dolor sit amet.</h2>
@@ -24,14 +24,21 @@
 
 
     <script>
+        // Adding the Style
+        let heading = document.querySelector('h1');
+        heading.style.color = "red";
 
-// Getting and setting attribute of element
-        let coderdost = document.querySelector('a');
-        console.log(coderdost.getAttribute('href'));
 
-// setting attribute
-        coderdost.setAttribute('href', 'https://www.youtube.com/@blackhatjr.332');
-        console.log(coderdost.getAttribute('href'));
+        // Add, Remove and Replace class of element
+        let mainHeading = document.querySelector('h1');
+        mainHeading.classList.add('newClass')
+
+        // Remove class
+        mainHeading.classList.remove('newClass');
+
+        // Replace class
+        mainHeading.classList.replace("main", "newClass");
+
 
     </script>
 

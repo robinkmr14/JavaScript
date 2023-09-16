@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Be a part of coder dost</h2>
+
+    <form action="" class="sign-up-form">
+        <input type="email" name="userEmail" id="email" placeholder="Email">
+        <input type="password" name="userPassword" id="password" placeholder="password">
+        <input type="submit" value="submit">
+    </form>
+    
+
+    <script>
+
+        // form events (submit form)
+        let form = document.querySelector('.sign-up-form');
+        // let email = document.querySelector('#email');
+        // let password = document.querySelector('#password');
+        form.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            console.log("submit successfully");
+            // console.log(email.value, password.value);
+            console.log(form.email.value, form.password.value);
+        })
+    </script>
+</body>
+</html>

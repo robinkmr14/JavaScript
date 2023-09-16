@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+
+    <h1>Coders Todo List</h1>
+
+    <ul>
+        <li>Eat</li>
+        <li>Sleep</li>
+        <li>Code</li>
+        <li>Repeat</li>
+    </ul>
+
+    <button class="clickme">Click Me</button>
+
+
+
+    <script>
+        // Event Basics (click event)
+
+        // Creating and removing the element
+
+
+        // creating element
+        let ul = document.querySelector('ul');
+
+        let eventElement = document.querySelector('.clickme');
+        eventElement.addEventListener('click', function () {
+            let li = document.createElement('li');
+            li.textContent = "Something new";
+            ul.append(li); // add at last
+            // ul.prepend(li); // add at first
+
+        });
+        let elements = document.querySelectorAll('li');
+        elements.forEach(function (element) {
+
+
+            // removing element
+            element.addEventListener('click', function (e) {
+                console.log(e);
+                console.log(e.target);
+                e.target.style.textDecoration = "line-through"
+                e.target.remove();
+            })
+        })
+    </script>
+</body>
+
+</html>
