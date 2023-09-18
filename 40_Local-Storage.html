@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <h1>Local Storage</h1>
+
+    <script>
+      //set item 
+      localStorage.setItem("passion", "programming");
+      localStorage.setItem("age", 24); 
+
+      //get item 
+        console.log(localStorage.getItem('age'));
+
+      //update item
+      localStorage.setItem("age", 26) // overwrite the previous value
+
+       //remove items
+       localStorage.removeItem("age");
+
+        // clear items 
+       localStorage.clear();
+      console.log(localStorage);
+    </script>
+  </body>
+</html>
