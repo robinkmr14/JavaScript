@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>OOPS IN JAVASCRIPT</h1>
+
+    <script>
+      // Object Oriented Programmingas
+
+      // Constructor function are the "new" Operator
+
+      // we cannot use "arrow" function as constructor
+      // Call "constructor" function using "new" keyword
+
+      // 1. new (object) created empty initially
+      // 2. "this" = object.
+      // 3. object linked to prototype.
+      // 4. function  autometically return object.
+
+      // Prototypes
+
+      // Each object created by "Constructor" function an access
+      // to all "methods" present inside that "constructor" prototype
+
+      let car = function (color, model) {
+        // Instance properties
+        this.color = color;
+        this.model = model;
+      };
+      console.log(car.prototype); // empty
+
+      // method
+      car.prototype.getDetails = function () {
+        console.log(`The details of the car are ${this.color} ${this.model}`);
+      };
+
+      let InstanceOfCar = new car("Black", 2024);
+      let Instance = new car("Blue", "2023");
+      console.log(InstanceOfCar, Instance);
+      InstanceOfCar.getDetails();
+
+      // we can also set "Properties" to prototype
+      car.prototype.company = "Honda";
+      console.log(car.prototype);
+      // or
+      // if constructor is not accessable
+      console.log(Instance.__proto__);
+
+
+      
+    </script>
+  </body>
+</html>

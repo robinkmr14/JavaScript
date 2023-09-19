@@ -9,6 +9,8 @@
     <h1>Local Storage</h1>
 
     <script>
+
+
       //set item 
       localStorage.setItem("passion", "programming");
       localStorage.setItem("age", 24); 
@@ -25,6 +27,42 @@
         // clear items 
        localStorage.clear();
       console.log(localStorage);
+
+      //How to store complex data structure like array or object
+      // Ultimately in local storage data store in string formate
+
+      let vehicles = [
+        {
+          company: "Honda",
+          model : "2023"
+        },
+        
+        {
+          company: "Mahindra",
+          model : "2022"
+        }
+      ]
+
+      let stringOfVehicles = JSON.stringify(vehicles);
+      console.log(stringOfVehicles);
+      localStorage.setItem("vehicles",stringOfVehicles);
+      console.log(localStorage);
+
+      // Get stored item again in object formate
+      let storedData = localStorage.getItem("vehicles");
+      let objectFormate = JSON.parse(storedData);
+      console.log(objectFormate);
+
+      
+
+
+
+
+
+
+
     </script>
+
+
   </body>
 </html>
