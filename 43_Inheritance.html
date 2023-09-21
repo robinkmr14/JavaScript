@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Inheritance</h1>
+
+    <script>
+      // Inheritance
+
+      class vechile {
+        constructor(model, color) {
+          this.color = color;
+          this.model = model;
+        }
+        startEngine() {
+          console.log("This is start engine function");
+        }
+      }
+
+      // child class
+      class Bike extends vechile {
+        constructor(color, model, engineCapacity) {
+          super(color, model);
+          this.engineCapacity = engineCapacity;
+        }
+        bikeMethod(){
+            console.log("This is bike method");
+        }
+      }
+
+      let newBike = new Bike("black", 2024, "125CC");
+      console.log(newBike);
+    </script>
+  </body>
+</html>

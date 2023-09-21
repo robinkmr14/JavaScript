@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>ES6 Classes</h1>
 
-
-
     <script>
-        // class declaration
-        class car {
-            constructor(color, model) {
-                this.color = color;
-                this.model = model;
-            }
-            // function
-            startEngine(){
-                console.log("This is Start Engine method of car class");
-            }
+      // class declaration
+      class car {
+        constructor(color, model) {
+          this.color = color;
+          this.model = model;
         }
-
-        car.prototype.breakMethod = function(){
-            console.log("This is break Method");
+        // function
+        startEngine() {
+          console.log("This is Start Engine method of car class");
         }
+      }
 
-        let honda = new car("black",2023);
-        
-        honda.color = "blue";
-        console.log(honda);
-        honda.breakMethod();
+      car.prototype.breakMethod = function () {
+        console.log("This is break Method");
+      };
 
-         // Important 
-        // -> Classes are not hoisted 
-        // -> calsses are also first class citizens ( pass as an arrgument)
-        // -> classes are ececuted in strict mode
+      // Static method--(It is not a instance of class / can't be called by the constructor or any class object)
+    //   car never inherited to all objects
+      car.breakMethod = function(){
+        console.log("This is static method");
+      }
 
-        
+
+      let honda = new car("black", 2023);
+
+      honda.color = "blue";
+      console.log(honda);
+      honda.breakMethod();
+      car.breakMethod();
+
+      // Important
+      // -> Classes are not hoisted
+      // -> calsses are also first class citizens ( pass as an arrgument)
+      // -> classes are ececuted in strict mode
     </script>
-</body>
+  </body>
 </html>

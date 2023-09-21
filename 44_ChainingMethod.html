@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chaining method</h1>
+
+    <script>
+      // Chaining Method
+      class BackAccount {
+        constructor(owner, pin) {
+          this.owner = owner;
+          this.pin = pin;
+          this.movements = [];
+        }
+
+        getMovements() {
+          return this.getMovements;
+        }
+
+        deposit(val) {
+          this.movements.push(val);
+          return this;
+        }
+
+        withdraw(val) {
+          this.deposit(-val);
+          return this;
+        }
+      }
+
+      let account = new BackAccount("Robin", 5685);
+      // Chain of method
+      account.deposit(45).withdraw(25).deposit(100);
+
+      console.log(account.getMovements());
+      console.log(account);
+    </script>
+  </body>
+</html>

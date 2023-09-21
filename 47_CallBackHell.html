@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Call Back Hell</h1>
+
+    <script>
+      // Making HTTP Request
+
+      let todo = (resource, callBack) => {
+        let request = new XMLHttpRequest();
+
+        request.addEventListener("readystatechange", () => {
+          if (request.readyState === 4 && request.status === 200) {
+            callBack(undefined, request.responseText);
+          } else if (request.readyState === 4) {
+            callBack("Data could not be feched", undefined);
+          }
+        });
+
+        request.open("Get", resource);
+
+        request.send();
+      };
+
+      // Chain of function(callBack Hell).
+      todo("data.json", (error, Data) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(Data);
+        }
+        todo("Mario.json", (error, Data) => {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log(Data);
+          }
+        });
+
+        todo("Carlos.json", (error, Data) => {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log(Data);
+          }
+          todo("Lurie.json", (error, Data) => {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log(Data);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
